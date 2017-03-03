@@ -1,4 +1,4 @@
-package com.demo.sisyphus.hellorobot;
+package com.demo.sisyphus.hellorobot.model;
 
 /**
  * Created by Sisyphus on 2017/3/1.

@@ -1,12 +1,17 @@
-package com.demo.sisyphus.hellorobot;
+package com.demo.sisyphus.hellorobot.view;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.text.method.LinkMovementMethod;
+import android.text.util.Linkify;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.demo.sisyphus.hellorobot.R;
+import com.demo.sisyphus.hellorobot.model.Msg;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -74,6 +79,8 @@ public class ChatAdapter extends RecyclerView.Adapter {
         Msg msg = list.get(position);
 
         tv.setText(msg.getMsg());
+        tv.setAutoLinkMask(Linkify.ALL);
+        tv.setMovementMethod(LinkMovementMethod.getInstance());
 
         switch (msg.getType()){
             case ME:
